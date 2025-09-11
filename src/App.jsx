@@ -32,7 +32,7 @@ const ugcReviews = [
   },
   {
     name: "Kate O.",
-    avatar: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=128&q=60",
+    avatar: "https://6htrntmt012y8ehd.public.blob.vercel-storage.com/kate_2.png",
     rating: 5,
     shout: "They're a 5/5 for me",
     body: "It was such a clean feeling trip too. Minimal nausea. No come up!",
@@ -62,18 +62,18 @@ const useCases = {
     label: "Beginners",
     items: [
       {
-        title: "Premium hearing protection",
-        body: "A thin and flexible membrane filter that is made from materials that imitate a second eardrum.",
+        title: "Better taste",
+        body: "92% of testers found that the Magic Bar tastes better than truffles.",
         image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=800&q=80"
       },
       {
-        title: "Keep sound clear",
-        body: "Our filter enhances music clarity by filtering out noise and unnecessary tones.",
+        title: "Ideal for microdosing",
+        body: "Resealable packaging, so you can microdose the bar in small pieces.",
         image: "https://images.unsplash.com/photo-1573496529574-be85d6a60704?auto=format&fit=crop&w=800&q=80"
       },
       {
-        title: "Hear voices better",
-        body: "Our filter improves voice clarity, ensuring voices are heard more prominently and clearly.",
+        title: "Long shelf-life",
+        body: "Up to 6 months if kept frozen, so you can wait until you’re ready to trip.",
         image: "https://images.unsplash.com/photo-1506157776980-c8d55d07a26c?auto=format&fit=crop&w=800&q=80"
       }
     ]
@@ -288,8 +288,8 @@ export default function HearsStyleHomepage() {
             <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/magic%20bar%20logo%20horizontal.png" alt="Magic Bar" className="h-8 w-auto" />
             <span className="sr-only">Magic Bar</span>
             </a>
-            <p className="mt-3 text-neutral-600 max-w-sm">Premium noise‑reducing earplugs. Designed for clarity. Replace images & text as needed.</p>
-            <p className="mt-4 text-xs text-neutral-500">© {new Date().getFullYear()} Magic Bar (Replica). All product names & trademarks belong to their owners.</p>
+            <p className="mt-3 text-neutral-600 max-w-sm">The first psychedelic mycelium bar. No nausea. Better trips. </p>
+            <p className="mt-4 text-xs text-neutral-500">Magic Bar is a registered trademark of Noetic BV.</p>
           </div>
           <div>
             <p className="font-medium">Shop</p>
