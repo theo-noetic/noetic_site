@@ -23,28 +23,28 @@ const testimonials = [
 // User-generated content reviews (UGC-style cards)
 const ugcReviews = [
   {
-    name: "Pav C.",
-    avatar: "https://images.unsplash.com/photo-1546456073-6712f79251bb?auto=format&fit=crop&w=128&q=60",
+    name: "James E.",
+    avatar: "https://6htrntmt012y8ehd.public.blob.vercel-storage.com/UGC_photo_4_small.png",
     rating: 5,
-    shout: "SAVED MY HEARING! 🙌",
-    body: "These earplugs are the BEST! As someone who works in the nightlife, I can still enjoy the music and not feel wrecked the next day.",
-    image: "https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=1200&q=60"
+    shout: "Smooth, mild, and euphoric",
+    body: "Much more preferable than [ordinary magic mushrooms]",
+    image: "https://6htrntmt012y8ehd.public.blob.vercel-storage.com/magic_bar_on_table.JPG"
   },
   {
-    name: "Nora A.",
+    name: "Kate O.",
     avatar: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=128&q=60",
     rating: 5,
-    shout: "Clear sound, comfy fit",
-    body: "I can chat with friends at the club without shouting. No ringing after!",
-    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=1200&q=60"
+    shout: "They're a 5/5 for me",
+    body: "It was such a clean feeling trip too. Minimal nausea. No come up!",
+    image: "https://6htrntmt012y8ehd.public.blob.vercel-storage.com/kate_UGC_photo.JPG"
   },
   {
-    name: "Marco R.",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=128&q=60",
-    rating: 4,
-    shout: "Great for DJ sets",
-    body: "Still hear the mix properly and the low end. Wore them for 4 hours—no fatigue.",
-    image: "https://images.unsplash.com/photo-1506157776980-c8d55d07a26c?auto=format&fit=crop&w=1200&q=60"
+    name: "Mickey B.",
+    avatar: "https://6htrntmt012y8ehd.public.blob.vercel-storage.com/UGC_photo_1_mickey%20small.png",
+    rating: 5,
+    shout: "A delightfully mellow experience.",
+    body: "I felt no heavy body high whatsoever, no nausea, and wanted to go out on a bike ride. A really different trip that I would love to take with friends! Light and playful",
+    image: "https://6htrntmt012y8ehd.public.blob.vercel-storage.com/magic_bar_UGC_3_small.JPG"
   }
 ];
 
@@ -59,7 +59,7 @@ const faqs = [
 const useCases = {
   clubbing: {
     key: "clubbing",
-    label: "Clubbing",
+    label: "Beginners",
     items: [
       {
         title: "Premium hearing protection",
@@ -215,12 +215,12 @@ export default function HearsStyleHomepage() {
       <section id="how" className="relative">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80" alt="Earplug fit" className="rounded-2xl object-cover w-full" />
+            <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/Magic%20Bar%20-%20Dosing%20Guide.jpeg" alt="Dosing guide" className="rounded-2xl object-cover w-full" />
             <div>
-              <h3 className="text-2xl font-semibold tracking-tight">Designed for everyday loud</h3>
-              <p className="mt-3 text-neutral-700">Concerts, clubs, festivals, open offices, workshops—wherever it gets loud, you’ll still enjoy crisp sound at a safer level.</p>
+              <h3 className="text-2xl font-semibold tracking-tight">Easy to dose.</h3>
+              <p className="mt-3 text-neutral-700">The Magic Bar has 10 squares. Each square is 1/10 of a high dose. Find your perfect dose somewhere in between.</p>
               <div className="mt-6 flex flex-wrap gap-3">
-                {["Concerts & festivals", "DJing & producing", "Commuting & flights", "Open offices", "Workshops & tools"].map(chip => (
+                {["Microdose = up to 1 square", "Light dose = 3-5 squares", "Medium dose = 6-8 squares", "Strong dose = 9-10 squares"].map(chip => (
                   <span key={chip} className="rounded-full border border-neutral-300 px-3 py-1 text-xs">{chip}</span>
                 ))}
               </div>
@@ -235,8 +235,8 @@ export default function HearsStyleHomepage() {
       <section id="usecases" className="mx-auto max-w-7xl px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="overflow-visible">
-            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight">Hears will upgrade your</h2>
-            <p id="usecases-word" className="mt-3 text-[min(12vw,64px)] font-semibold leading-[1.25] pb-2 whitespace-nowrap bg-gradient-to-r from-pink-500 to-orange-300 bg-clip-text text-transparent">{useCases[activeUse].label}</p>
+            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight">Perfect for</h2>
+            <p id="usecases-word" className="mt-3 text-[min(12vw,64px)] font-semibold leading-[1.25] pb-2 whitespace-nowrap bg-gradient-to-r from-blue-400 to-white-300 bg-clip-text text-transparent">{useCases[activeUse].label}</p>
             {Object.keys(useCases).length > 1 && (
               <div className="mt-6 flex flex-wrap gap-2">
                 {Object.values(useCases).map(c => (
@@ -251,7 +251,7 @@ export default function HearsStyleHomepage() {
           <div className="space-y-10">
             {useCases[activeUse].items.map((it, idx) => (
               <article key={idx} className="flex items-center gap-6">
-                <div className="self-stretch w-1.5 bg-rose-400 rounded-full" />
+                <div className="self-stretch w-1.5 bg-blue-400 rounded-full" />
                 <div className="flex-1">
                   <h3 className="text-3xl font-semibold leading-tight">{it.title}</h3>
                   <p className="mt-2 text-neutral-600 max-w-prose">{it.body}</p>
