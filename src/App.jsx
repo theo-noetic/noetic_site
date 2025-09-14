@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import HowItWorks from "./howitworks.jsx";
-import { Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route, useLocation } from "react-router-dom";
 
 /**
  * ZBiotics — Homepage (April 5, 2024 snapshot) replica
@@ -18,6 +18,12 @@ export default function ZbioticsReplica() {
   const [cartOpen, setCartOpen] = useState(false);
   const [cart, setCart] = useLocalStorage("zb_cart", []);
   const cartCount = useMemo(() => cart.reduce((n, i) => n + i.qty, 0), [cart]);
+  
+  // Debug route changes
+  const location = useLocation();
+  useEffect(() => {
+    console.log('Route changed to:', location.pathname);
+  }, [location]);
 
   // Smooth anchor scroll
   useEffect(() => {
@@ -66,7 +72,7 @@ export default function ZbioticsReplica() {
       <StyleTag />
       <TopNotice />
       <Header cartCount={cartCount} onOpenCart={() => setCartOpen(true)} />
-      <Routes>
+      <Routes key={location.pathname}>
         <Route path="/" element={
           <main>
             <Hero />
@@ -80,6 +86,18 @@ export default function ZbioticsReplica() {
           </main>
         } />
         <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="*" element={
+          <main>
+            <Hero />
+            <PressBar />
+            <PreAlcoholSection />
+            <BetterMornings />
+            <TomorrowSection />
+            <LabNotes />
+            <Faq />
+            <Newsletter />
+          </main>
+        } />
       </Routes>
       <Footer />
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} cart={cart} setCart={setCart} />

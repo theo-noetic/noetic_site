@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 /**
  * HowItWorks.jsx — ZBiotics-style "How It Works" page replica (paraphrased)
@@ -50,6 +51,20 @@ const AnchorNav = () => (
 export default function HowItWorks() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white via-neutral-50 to-white text-neutral-900">
+      {/* Header with back navigation */}
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-neutral-200">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="flex items-center justify-between h-16">
+            <Link to="/" className="text-xl font-semibold text-neutral-900 hover:text-neutral-600">
+              ← Back to Home
+            </Link>
+            <Link to="/" className="text-2xl font-bold text-neutral-900">
+              Hears Home
+            </Link>
+          </div>
+        </div>
+      </header>
+      
       {/* Top bar anchor nav */}
       <AnchorNav />
 
