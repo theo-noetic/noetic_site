@@ -162,7 +162,7 @@ function TopNotice() {
   if (!visible) return null;
   return (
     <div className="w-full bg-neutral-900 text-white text-center text-[13px] tracking-wide py-2 px-3 flex items-center justify-center gap-4">
-      <span>NO SHIPPING FEES — COMPLIMENTARY DELIVERY ON EVERY PURCHASE!</span>
+      <span>LAUNCHING IN 6 WEEKS!</span>
       <button className="absolute right-3 text-white/80 hover:text-white" onClick={() => setVisible(false)} aria-label="Dismiss notice">×</button>
     </div>
   );
@@ -188,8 +188,6 @@ function Header({ cartCount, onOpenCart }) {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[15px]">
             <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works">VIEW PRODUCTS</a>
-            <Dropdown label="Science" items={[{label:"How it Works",href:"/how-it-works"},{label:"Technology",href:"#technology"}]} />
-            <Dropdown label="About" items={[{label:"Mission",href:"#mission"},{label:"Team",href:"#team"},{label:"Reviews",href:"#reviews"}]} />
             <Link className="hover:text-neutral-600" to="/how-it-works">Science</Link>       
             <Dropdown label="About" items={[{label:"Mission",href:"#mission"},{label:"Team",href:"#team"},{label:"Reviews",href:"#reviews"}]} />
             <a className="hover:text-neutral-600" href="#faq">Support</a>
