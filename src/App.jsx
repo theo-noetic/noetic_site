@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import HowItWorks from "./HowItWorks.jsx";
+import HowItWorks from "./howitworks.jsx";
 import { Link, Routes, Route } from "react-router-dom";
 
 /**
