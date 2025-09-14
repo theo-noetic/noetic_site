@@ -1,4 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import HowItWorks from "./HowItWorks.jsx";
+import { Link, Routes, Route } from "react-router-dom";
 
 /**
  * ZBiotics — Homepage (April 5, 2024 snapshot) replica
@@ -64,16 +66,21 @@ export default function ZbioticsReplica() {
       <StyleTag />
       <TopNotice />
       <Header cartCount={cartCount} onOpenCart={() => setCartOpen(true)} />
-      <main>
-        <Hero />
-        <PressBar />
-        <PreAlcoholSection />
-        <BetterMornings />
-        <TomorrowSection />
-        <LabNotes />
-        <Faq />
-        <Newsletter />
-      </main>
+      <Routes>
+        <Route path="/" element={
+          <main>
+            <Hero />
+            <PressBar />
+            <PreAlcoholSection />
+            <BetterMornings />
+            <TomorrowSection />
+            <LabNotes />
+            <Faq />
+            <Newsletter />
+          </main>
+        } />
+        <Route path="/how-it-works" element={<HowItWorks />} />
+      </Routes>
       <Footer />
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} cart={cart} setCart={setCart} />
     </div>
@@ -181,9 +188,10 @@ function Header({ cartCount, onOpenCart }) {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[15px]">
             <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works">VIEW PRODUCTS</a>
-            <Dropdown label="Science" items={[{label:"How it Works",href:"#how-it-works"},{label:"Technology",href:"#technology"}]} />
+            <Dropdown label="Science" items={[{label:"How it Works",href:"/how-it-works"},{label:"Technology",href:"#technology"}]} />
             <Dropdown label="About" items={[{label:"Mission",href:"#mission"},{label:"Team",href:"#team"},{label:"Reviews",href:"#reviews"}]} />
-            <a className="hover:text-neutral-600" href="#lab-notes">Blog</a>
+            <Link className="hover:text-neutral-600" to="/how-it-works">Science</Link>       
+            <Dropdown label="About" items={[{label:"Mission",href:"#mission"},{label:"Team",href:"#team"},{label:"Reviews",href:"#reviews"}]} />
             <a className="hover:text-neutral-600" href="#faq">Support</a>
             <button onClick={onOpenCart} className="relative inline-flex items-center gap-2 hover:text-neutral-700">
               <span>Cart</span>
@@ -228,7 +236,11 @@ function Dropdown({ label, items }) {
       <button className="inline-flex items-center gap-1 hover:text-neutral-600">{label}<ChevronDown /></button>
       <div className="pointer-events-none opacity-0 translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition absolute left-1/2 -translate-x-1/2 mt-2 w-52 rounded-xl border border-neutral-200 bg-white shadow-xl p-2">
         {items.map((it) => (
-          <a key={it.label} href={it.href} className="block rounded-lg px-3 py-2 text-sm hover:bg-neutral-50">{it.label}</a>
+          it.href.startsWith('/') ? (
+            <Link key={it.label} to={it.href} className="block rounded-lg px-3 py-2 text-sm hover:bg-neutral-50">{it.label}</Link>
+          ) : (
+            <a key={it.label} href={it.href} className="block rounded-lg px-3 py-2 text-sm hover:bg-neutral-50">{it.label}</a>
+          )
         ))}
       </div>
     </div>
