@@ -95,7 +95,6 @@ export default function ZbioticsReplica() {
           </main>
         } />
         <Route path="/how-it-works" element={<HowItWorks />} />
-        <Route path="/instructions" element={<Instructions />} />
         <Route path="*" element={
           <main>
             <Hero />
@@ -215,7 +214,6 @@ function Header({ cartCount, onOpenCart }) {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[15px]">
             <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works">COMING SOON</a>
-            <a className="hover:text-neutral-600" href="/instructions">Instructions</a>
           </nav>
           {/* Mobile controls */}
           <div className="md:hidden flex items-center gap-2">
