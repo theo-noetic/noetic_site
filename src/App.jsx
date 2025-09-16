@@ -198,9 +198,8 @@ function Header({ cartCount, onOpenCart }) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between ${condensed ? "h-14" : "h-16"} transition-[height]`}>
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="h-8 w-8 grid place-items-center rounded bg-neutral-900 text-white font-bold">Z</div>
-            <span className="font-semibold tracking-tight text-lg group-hover:opacity-80">ZBiotics®</span>
+          <a href="#" className="group">
+            <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/magic%20bar%20logo%20horizontal.png" alt="Magic Bar" className="h-8 group-hover:opacity-80" />
           </a>
 
           {/* Desktop nav */}
@@ -299,7 +298,7 @@ function Hero() {
           </div>
         </div>
         <div className="relative">
-          <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/mycelium_bar_large.png" alt="Two cocktails beside mini ZBiotics bottles on a marble table" className="w-full h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
+          <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/mycelium_bar_large.png" alt="Magic Bar" className="w-full h-[300px] sm:h-[400px] lg:h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
         </div>
       </div>
     </section>
@@ -307,14 +306,7 @@ function Hero() {
 }
 
 function PressBar() {
-  const logos = [
-    { alt: "Forbes", src: "https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/logo-forbes_1_160x160%402x.png?v=1634776854" },
-    { alt: "CNET", src: "https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/logo-cnet2_160x160%402x.png?v=1634777126" },
-    { alt: "Business Insider", src: "https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/logo-bi_160x160%402x.png?v=1634777031" },
-    { alt: "Cheddar", src: "https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/logo-cheddar_1_160x160%402x.png?v=1634777031" },
-    { alt: "TechCrunch", src: "https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/logo-tc_160x160%402x.png?v=1634777031" },
-    { alt: "C&EN", src: "https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/logo-cen_1_160x160%402x.png?v=1634777031" },
-  ];
+  const logos = [];
   return (
     <section className="border-y border-neutral-200 select-none" aria-label="As seen in">
       <div className="md:hidden overflow-hidden">
@@ -392,16 +384,16 @@ function PreAlcoholSection() {
           <div className="grid grid-cols-2 gap-5 mb-10">
             <div className="relative h-[260px] sm:h-[300px] rounded-3xl overflow-hidden">
               <img
-                src="https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/Zbiotics_Product_10_5_21-399-Edit-750x1125-30-prog.jpg?v=1647200915"
-                alt="Cocktails on marble with ZBiotics bottles"
+                src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/Seva%20-%20Magic%20Bar%20-%20Small.jpeg"
+                alt="Magic Bar"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
             </div>
             <div className="relative h-[260px] sm:h-[300px] rounded-3xl overflow-hidden">
               <img
-                src="https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/Home---woman-tying-sneaker.jpg?v=1634772105"
-                alt="Athlete tying a sneaker"
+                src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/Theo%20-%20Magic%20Bar%20-%20Small.jpeg"
+                alt="Magic Bar"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
@@ -422,8 +414,8 @@ function PreAlcoholSection() {
           <div className="justify-self-start">
             <div className="w-full max-w-[520px] h-[560px] rounded-3xl overflow-hidden shadow-xl -mt-8">
               <img
-                src="https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/Zbiotics_Product_10_5_21-399-Edit-750x1125-30-prog.jpg?v=1647200915"
-                alt="Cocktails on marble with ZBiotics bottles"
+                src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/Seva%20-%20Magic%20Bar%20-%20Small.jpeg"
+                alt="Customer holding the Magic Bar"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -442,8 +434,8 @@ function PreAlcoholSection() {
           <div className="justify-self-end">
             <div className="w-full max-w-[520px] h-[560px] rounded-3xl overflow-hidden shadow-xl mt-20">
               <img
-                src="https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/Home---woman-tying-sneaker.jpg?v=1634772105"
-                alt="Athlete tying a sneaker"
+                src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/Theo%20-%20Magic%20Bar%20-%20Small.jpeg"
+                alt="Founder holding the Magic Bar"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -456,7 +448,7 @@ function PreAlcoholSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-16">
         <div className="rounded-2xl bg-neutral-50 border border-neutral-200 p-6 sm:p-8 md:p-10 flex items-center justify-between gap-6">
           <div><p className="text-2xl sm:text-3xl font-semibold">2 <span className="font-normal">Years of Research</span></p></div>
-          <div className="text-sm text-neutral-600">Developed by a team of 2 Oxford and Cambridge scientists in a lab in Utrecht.</div>
+          <div className="text-sm text-neutral-600">Developed by a team of two Oxford and Cambridge scientists in a lab in Utrecht.</div>
         </div>
       </div>
     </section>
@@ -466,12 +458,10 @@ function PreAlcoholSection() {
 // Desktop carousel with arrows + side thumbnails; mobile falls back to scroll cards
 function BetterMornings() {
   const items = [
-    { name: "Max V.", role: "LEADERSHIP AND CAREER COACH", quote: "Nothing else like it.", body: `Spending the past four years in the events and hospitality industry, I learned quickly that alcohol is an occupational hazard. Peak season meetups with caterers, bartenders, and event planners frequently involved midweek drinks, with showcases and networking events sometimes two or three nights in a row.
-
-Not only did ZBiotics make these meetings far less detrimental to energy levels the following morning, keeping a few extras made for a great talking point for those that would join me….`, src: "https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/Testimonial-Max.jpg?v=1634774468" },
-    { name: "Sophina T.", role: "FIELD APPLICATION SCIENTIST", quote: "No more roulette.", body: "I've never been able to find that sweet spot in terms of how many drinks before future me pays for it. With ZBiotics, I'm no longer playing roulette with my productivity the next day.", src: "https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/Testimonial-Sophina-2.jpg?v=1634773733" },
-    { name: "Kofi O.", role: "ENGINEER & SINGER/SONGWRITER", quote: "Stress-free nights.", body: "ZBiotics has been such a huge help for me in reducing my anxiety around having a drink or two with friends during the week.", src: "https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/Testimonial-Kofi-2.jpg?v=1634774243" },
-    { name: "Sierra M.", role: "RESEARCHER & STUDENT", quote: "Truly transformative.", body: "I used to wake up debilitated after only a glass or two of wine. Nothing was truly transformative until I tried ZBiotics.", src: "https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/Testimonial-Sierra.jpg?v=1634773733" },
+  
+    { name: "Sam", role: "Business School Professor", quote: "No bubble guts.", body: "Tastes so much better than truffles. A delightfully mellow experience.", src: "https://6htrntmt012y8ehd.public.blob.vercel-storage.com/Customer%201.jpg" },
+    { name: "Victor", role: "Software Engineer", quote: "A more social experience.", body: "I love truffles, but they're too expensive and hard to split between friends. The Magic Bar is a much more social vibe.", src: "https://6htrntmt012y8ehd.public.blob.vercel-storage.com/Customer%202.JPG" },
+    { name: "Sierra M.", role: "MBA Student", quote: "Just nice and easy.", body: "I don't trip often, so when I do, I want it to be an easy and mellow experience. The Magic Bar is perfect for that.", src: "https://6htrntmt012y8ehd.public.blob.vercel-storage.com/Customer%203.JPG" },
   ];
   const [idx, setIdx] = useState(0);
   const prev = () => setIdx((i) => (i - 1 + items.length) % items.length);
@@ -738,8 +728,8 @@ function Newsletter() {
   return (
     <section className="py-20" data-reveal>
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-semibold tracking-tight">Never miss a drop</h2>
-        <p className="mt-2 text-neutral-600">Exclusive deals for subscribers • Stay up to date on ZBiotics</p>
+        <h2 className="text-3xl font-semibold tracking-tight">T(r)ips and tricks on how to use psychedelics</h2>
+        <p className="mt-2 text-neutral-600">Exclusive updates for subscribers • Stay up to date about the Magic Bar</p>
         <form className="mt-8 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-3 max-w-xl mx-auto" onSubmit={(e)=>e.preventDefault()}>
           <input type="email" required placeholder="Enter your email" className="w-full rounded-full border border-neutral-300 px-5 py-3 outline-none focus:ring-2 focus:ring-neutral-900"/>
           <button className="inline-flex items-center justify-center rounded px-6 py-3 font-medium btn-orange">Subscribe</button>
@@ -752,19 +742,20 @@ function Newsletter() {
 
 function Footer() {
   const cols = [
-    { title: "Explore", links: [ { label: "Product", href: "#how-it-works" }, { label: "Bulk Packs", href: "#how-it-works" }, { label: "FAQs & Support", href: "#faq" }, { label: "Blog", href: "#lab-notes" }, { label: "Team", href: "#team" }, { label: "Mission", href: "#mission" } ] },
-    { title: "More", links: [ { label: "Careers", href: "#" }, { label: "Contact Us", href: "#" }, { label: "Diversity & Inclusion", href: "#" }, { label: "Affiliates", href: "#" }, { label: "Corporate Gifting & Events", href: "#" }, { label: "Retail Locations", href: "#" } ] },
-    { title: "Account", links: [ { label: "Subscriptions & Login", href: "#" }, { label: "Refund Policy", href: "#" }, { label: "Refer a Friend", href: "#" } ] },
+    { links: [ { href: "#how-it-works" }, { href: "#how-it-works" }, { href: "#faq" }, { href: "#lab-notes" }, { href: "#team" }, { href: "#mission" } ] },
+    { links: [ { href: "#" }, { href: "#" }, { href: "#" }, { href: "#" }, { href: "#" }, { href: "#" } ] },
+    { links: [ { href: "#" }, { href: "#" }, { href: "#" } ] },
   ];
+
 
   return (
     <footer className="border-t border-neutral-200 bg-neutral-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <div className="flex items-center gap-3"><div className="h-9 w-9 grid place-items-center rounded bg-neutral-900 text-white font-bold">Z</div><span className="font-semibold">ZBiotics®</span></div>
-            <address className="not-italic mt-6 text-sm text-neutral-600">info@zbiotics.com<br/>44 Montgomery St, 3rd floor<br/>San Francisco, CA 94104</address>
-            <div className="mt-6 flex gap-4 text-neutral-600"><a href="#" aria-label="Facebook" className="hover:text-neutral-800">FB</a><a href="#" aria-label="Twitter" className="hover:text-neutral-800">TW</a><a href="#" aria-label="Instagram" className="hover:text-neutral-800">IG</a></div>
+            <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/magic%20bar%20logo%20horizontal.png" alt="Magic Bar" className="h-9" />
+            <address className="not-italic mt-6 text-sm text-neutral-600">hi@magicbar.co<br/>Overtoom 141, 1054 HG<br/>Amsterdam, Netherlands</address>
+            <div className="mt-6 flex gap-4 text-neutral-600"><a href="https://www.instagram.com/_magicbar" aria-label="Instagram" className="hover:text-neutral-800">IG</a></div>
           </div>
           {cols.map((c) => (
             <div key={c.title}>
@@ -773,7 +764,7 @@ function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-14 text-xs text-neutral-500">© ZBiotics — demo replica. Payment methods and policies omitted.</div>
+        <div className="mt-14 text-xs text-neutral-500">© Noetic BV 2025</div>
       </div>
     </footer>
   );
