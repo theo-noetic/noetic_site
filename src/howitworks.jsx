@@ -32,7 +32,7 @@ const Pill = ({ children }) => (
 );
 
 const AnchorNav = () => (
-  <div className="sticky top-16 z-20 w-full bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-neutral-200">
+  <div className="sticky top-28 z-20 w-full bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-neutral-200">
     <nav className="mx-auto max-w-6xl px-4">
       <div className="flex flex-wrap gap-2 py-3 text-sm">
         <a href="#basics" className="hover:underline"><Pill>Basics</Pill></a>
@@ -51,19 +51,16 @@ const AnchorNav = () => (
 export default function HowItWorks() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white via-neutral-50 to-white text-neutral-900">
-      {/* Header with back navigation */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-neutral-200">
+      {/* Back navigation bar */}
+      <div className="sticky top-16 z-40 bg-white/80 backdrop-blur border-b border-neutral-200">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="flex items-center justify-between h-16">
-            <Link to="/" className="text-xl font-semibold text-neutral-900 hover:text-neutral-600">
+          <div className="flex items-center justify-between h-12">
+            <Link to="/" className="text-lg font-medium text-neutral-900 hover:text-neutral-600 flex items-center gap-2">
               ← Back to Home
-            </Link>
-            <Link to="/" className="text-2xl font-bold text-neutral-900">
-              Hears Home
             </Link>
           </div>
         </div>
-      </header>
+      </div>
       
       {/* Top bar anchor nav */}
       <AnchorNav />

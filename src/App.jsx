@@ -46,13 +46,22 @@ export default function ZbioticsReplica() {
 
   // Reveal on scroll
   useEffect(() => {
-    const els = document.querySelectorAll("[data-reveal]");
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((en) => en.isIntersecting && en.target.classList.add("reveal-in"));
-    }, { threshold: 0.14 });
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
+    // Small delay to ensure DOM is fully rendered
+    const timer = setTimeout(() => {
+      const els = document.querySelectorAll("[data-reveal]");
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => en.isIntersecting && en.target.classList.add("reveal-in"));
+      }, { threshold: 0.14 });
+      els.forEach((el) => io.observe(el));
+    }, 100);
+    
+    return () => {
+      clearTimeout(timer);
+      // Clean up any existing observers
+      const els = document.querySelectorAll("[data-reveal]");
+      els.forEach((el) => el.classList.remove("reveal-in"));
+    };
+  }, [location.pathname]);
 
   const addToCart = (item) => {
     setCart((prev) => {
@@ -72,7 +81,7 @@ export default function ZbioticsReplica() {
       <StyleTag />
       <TopNotice />
       <Header cartCount={cartCount} onOpenCart={() => setCartOpen(true)} />
-      <Routes key={location.pathname}>
+      <Routes>
         <Route path="/" element={
           <main>
             <Hero />
@@ -198,7 +207,7 @@ function Header({ cartCount, onOpenCart }) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between ${condensed ? "h-14" : "h-16"} transition-[height]`}>
           {/* Logo */}
-          <a href="#" className="group">
+          <a href="/" className="group">
             <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/magic%20bar%20logo%20horizontal.png" alt="Magic Bar" className="h-8 group-hover:opacity-80" />
           </a>
 
