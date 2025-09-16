@@ -148,7 +148,7 @@ html{
 }
 
 /* --- existing styles from your app --- */
-:root{ --zb-orange:#DE7F3E; --zb-orange-dark:#D77333; --zb-grey:#6B6B6B; }
+:root{ --zb-orange:#3590F3; --zb-orange-dark:#3B3A98; --zb-grey:#6B6B6B; }
 @keyframes marquee {0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .reveal-in{opacity:1!important;transform:translateY(0)!important}
@@ -292,14 +292,14 @@ function Hero() {
     <section className="relative overflow-hidden bg-white" data-reveal>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
         <div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight">Your first drink of the night for a better tomorrow</h1>
-          <p className="mt-6 text-lg leading-relaxed text-neutral-700 max-w-xl">Genetically engineered by a team of PhD microbiologists, ZBiotics® is a probiotic drink that breaks down the byproduct of alcohol responsible for rough mornings after drinking.</p>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight">The first psychedelic mycelium bar</h1>
+          <p className="mt-6 text-lg leading-relaxed text-neutral-700 max-w-xl">The Magic Bar is psychedelic tempeh - mushrooms, grown on grain. It produces a psychedelic experience with less nausea and more positive trips than 'magic truffles'.</p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#how-it-works" className="inline-flex items-center justify-center rounded px-6 py-3 font-medium btn-orange">SHOP HERE</a>
+            <a href="#how-it-works" className="inline-flex items-center justify-center rounded px-6 py-3 font-medium btn-orange">FIND A STORE</a>
           </div>
         </div>
         <div className="relative">
-          <img src="https://web.archive.org/web/20240405210321im_/https://zbiotics.com/cdn/shop/files/Zbiotics_Product_10_5_21-399-Edit-750x1125-30-prog.jpg?v=1647200915" alt="Two cocktails beside mini ZBiotics bottles on a marble table" className="w-full h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
+          <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/mycelium_bar_large.png" alt="Two cocktails beside mini ZBiotics bottles on a marble table" className="w-full h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
         </div>
       </div>
     </section>
@@ -409,9 +409,9 @@ function PreAlcoholSection() {
           </div>
 
           <div className="text-left">
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">A Pre-Alcohol <span className="block">Probiotic</span></h2>
-            <p className="mt-6 text-neutral-700 leading-relaxed">Drink ZBiotics before drinking alcohol. Alcohol produces acetaldehyde, a byproduct that wreaks havoc on your next day. ZBiotics is the first and only product engineered to break down acetaldehyde.</p>
-            <p className="mt-4 text-neutral-700 leading-relaxed">Now you can confidently enjoy drinking, because ZBiotics was invented with science — not just supplements.</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">The first of its kind</h2>
+            <p className="mt-6 text-neutral-700 leading-relaxed">We took the mycelium of a potent psychedelic mushroom species, and grew it on easy-to-digest pasta flour.</p>
+            <p className="mt-4 text-neutral-700 leading-relaxed">The result is a psychedelic product that's easier on your stomach, and easier to dose than magic truffles.</p>
             <a href="#lab-notes" className="mt-8 inline-flex items-center justify-center rounded px-6 py-3 font-medium btn-orange">LEARN MORE</a>
           </div>
         </div>
@@ -432,9 +432,9 @@ function PreAlcoholSection() {
 
           {/* Center copy */}
           <div className="text-center px-6 py-10">
-            <h2 className="text-4xl font-semibold tracking-tight">A Pre-Alcohol <span className="block">Probiotic</span></h2>
-            <p className="mt-6 text-neutral-700 leading-relaxed max-w-2xl mx-auto">Drink ZBiotics before drinking alcohol. Alcohol produces acetaldehyde, a byproduct that wreaks havoc on your next day. ZBiotics is the first and only product engineered to break down acetaldehyde.</p>
-            <p className="mt-4 text-neutral-700 leading-relaxed max-w-2xl mx-auto">Now you can confidently enjoy drinking, because ZBiotics was invented with science — not just supplements.</p>
+            <h2 className="text-4xl font-semibold tracking-tight">No nausea</h2>
+            <p className="mt-6 text-neutral-700 leading-relaxed max-w-2xl mx-auto">The Magic Bar is much easier to digest than magic truffles, because it's over 50% pasta flour.</p>
+            <p className="mt-4 text-neutral-700 leading-relaxed max-w-2xl mx-auto">This means little to no nausea, and a (much) more enjoyable experience.</p>
             <a href="#lab-notes" className="mt-10 inline-flex items-center justify-center rounded px-6 py-3 font-medium btn-orange">LEARN MORE</a>
           </div>
 
@@ -455,8 +455,8 @@ function PreAlcoholSection() {
       {/* Counter bar (unchanged) */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-16">
         <div className="rounded-2xl bg-neutral-50 border border-neutral-200 p-6 sm:p-8 md:p-10 flex items-center justify-between gap-6">
-          <div><p className="text-2xl sm:text-3xl font-semibold">2,000,000+ <span className="font-normal">Better Mornings</span></p></div>
-          <div className="text-sm text-neutral-600">Trusted by customers since launch — and counting.</div>
+          <div><p className="text-2xl sm:text-3xl font-semibold">2 <span className="font-normal">Years of Research</span></p></div>
+          <div className="text-sm text-neutral-600">Developed by a team of 2 Oxford and Cambridge scientists in a lab in Utrecht.</div>
         </div>
       </div>
     </section>
@@ -481,7 +481,7 @@ Not only did ZBiotics make these meetings far less detrimental to energy levels 
   return (
     <section id="reviews" className="py-24 bg-white border-t border-neutral-200" data-reveal>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-[40px] sm:text-[48px] font-semibold tracking-tight mb-6">Better Mornings</h2>
+        <h2 className="text-[40px] sm:text-[48px] font-semibold tracking-tight mb-6">Better Trips</h2>
 
         {/* Mobile: horizontal cards */}
         <div className="lg:hidden -mx-4 px-4 overflow-x-auto snap-x snap-mandatory space-x-5 flex">
@@ -591,17 +591,10 @@ function TomorrowSection() {
           {/* Copy */}
           <div className="text-center lg:text-left">
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-              Tomorrow Morning is <span className="block">Only the Beginning</span>
+              Easy to dose - or microdose.
             </h2>
             <p className="mt-6 text-neutral-700 leading-relaxed max-w-3xl lg:max-w-prose mx-auto lg:mx-0">
-              ZBiotics’ Pre-Alcohol Probiotic is the first of its kind, but it won’t be the last.
-              We believe that genetic engineering – applied transparently and responsibly – has the
-              capacity to directly improve people’s lives in ways previously unachievable. We’re
-              working to build that future.
-            </p>
-            <p className="mt-4 text-neutral-700 leading-relaxed max-w-3xl lg:max-w-prose mx-auto lg:mx-0">
-              Every probiotic we engineer serves a different function and purpose for daily living.
-              We can’t wait to introduce them all.
+              The Magic Bar is shaped like a chocolate bar, with 10 squares. Each square is 1/10 of a full dose. To find your perfect dose, just count out the number of squares. 
             </p>
             <a href="#lab-notes" className="mt-8 inline-flex items-center justify-center rounded px-5 py-2.5 font-medium btn-orange">
               SEE THE POSSIBILITIES
@@ -655,11 +648,11 @@ function TomorrowSection() {
 
 function LabNotes() {
   const posts = [
-    { title: "Beyond the Buzzwords: Unpacking What Food Labels Really Mean", excerpt: "Why are the food labels in grocery stores so confusing? What do they really mean? And why do we care so deeply about this at ZBiotics?", href: "#" },
-    { title: "Does ZBiotics Pre-Alcohol Probiotic Work for Every Body?", excerpt: "Learn why ZBiotics Pre-Alcohol Probiotic works (or seems to not work for some people) before drinking alcohol.", href: "#" },
-    { title: "ZBiotics 2023 Year in Review", excerpt: "As we mark and reflect on the year, we look back at what we've accomplished and learned.", href: "#" },
-    { title: "Citizenship and Giving Tuesday at ZBiotics", excerpt: "How we approach community, giving, and responsibility as a company.", href: "#" },
-    { title: "Are There “Good” or “Bad” Bacteria?", excerpt: "A closer look at how we talk about bacteria — and why the truth is more nuanced.", href: "#" },
+    { title: "What is mycelium?", excerpt: "What's the difference between a mushroom, a truffle, and mycelium? And why should you care?", href: "#" },
+    { title: "Why is it shaped like a chocolate bar?", excerpt: "Learn why we developed the Magic Bar to look like a chocolate bar, and why this makes it easier to dose.", href: "#" },
+    { title: "How should I prepare for a trip?", excerpt: "Learn how to prepare for a large-dose psychedelic trip, and what to expect.", href: "#" },
+    { title: "What are the risks when taking a psychedelic like the Magic Bar?", excerpt: "Learn when it's safe to take a psychedelic like the Magic Bar, and when it's not.", href: "#" },
+    { title: "What's legal, and what's not, in the Netherlands?", excerpt: "If it's not legal, there's no guarantee it's safe. Learn the Dutch laws on psychedelics.", href: "#" },
   ];
 
   const listRef = useRef(null);
@@ -677,7 +670,7 @@ function LabNotes() {
           {/* Left info + CTA */}
           <div>
             <h2 className="text-3xl font-semibold tracking-tight">Lab Notes</h2>
-            <p className="mt-2 text-neutral-600">Read our blog to learn more about the science of alcohol, genetic engineering, our company, and more.</p>
+            <p className="mt-2 text-neutral-600">Read our blog to learn more about the science of psychedelics, mycelium, our company, and more.</p>
             <a href="#" className="mt-6 inline-flex items-center justify-center rounded px-5 py-3 font-medium btn-orange">START LEARNING</a>
             <div className="mt-10 flex gap-6">
               <button onClick={() => scrollByDir(-1)} className="w-16 h-16 rounded-full border border-neutral-400 grid place-items-center hover:bg-neutral-50" aria-label="Previous posts"><ArrowLeft/></button>
@@ -705,20 +698,20 @@ function LabNotes() {
 
 function Faq() {
   const faqs = [
-    { q: "What is ZBiotics® Pre-Alcohol Probiotic?", a: "ZBiotics® Pre-Alcohol Probiotic is a patented, genetically engineered probiotic that helps you land on your feet the day after drinking alcohol. It’s engineered to break down an unwanted byproduct of alcohol called acetaldehyde – the main culprit in those rough mornings after drinking." },
-    { q: "How does ZBiotics work?", a: "ZBiotics is designed to replicate the natural process of your liver, but do it in your gut. We took a normal probiotic bacteria you already eat every day, and we bioengineered it to produce the same type of enzyme your liver already produces. That enzyme breaks down acetaldehyde – an unwanted byproduct of alcohol that forms in your gut when you drink. Your liver does not have access to your gut. But by putting ZBiotics directly in your gut, the goal is to augment your body’s natural ability to digest acetaldehyde while you drink and while you sleep – helping you make the most of the next day. Just remember that ZBiotics does not affect intoxication or make alcohol safer to drink, so always drink responsibly." },
-    { q: "When do I drink ZBiotics?", a: "When you're drinking. The earlier the better. ZBiotics’ probiotics need time to “wake up” in your gut, so we say the earlier the better if you can remember it. We drink ZBiotics just before going out – right before our first drink. But ZBiotics should be active if you drink it any time during the day or evening, so a few hours before drinking, right with your first drink, or even if you’ve already enjoyed a round or two, go for it." },
-    { q: "How long does 1 bottle of ZBiotics last after I drink it?", a: "One ZBiotics taken before drinking will cover you for at least 18 hours. One bottle is good for a whole day, even if you're starting with brunch mimosas and have nighttime plans after as well! Drinking more than one bottle likely won't provide additional benefit." },
-    { q: "Does ZBiotics expire?", a: "ZBiotics expires 18 months after bottling. Store ZBiotics at room temperature with the cap on. Do not refrigerate." },
-  ];
+    { q: "What is the Magic Bar?", a: "The Magic Bar is the 'roots' of a psychedelic mushroom, grown on pasta flour. Just like truffles, it's legal in the Netherlands." },
+    { q: "Is the Magic Bar made of chocolate?", a: "No. It's made of mycelium, pasta flour, and a few other natural food ingredients to help the mycelium grow. It's shaped like a chocolate bar to make it easier to dose." },
+    { q: "How do I store the Magic Bar?", a: "The Magic Bar is stored in the freezer. It's best to keep it in the freezer until you're ready to use it." },
+    { q: "How do I use the Magic Bar?", a: "Take it out of the freezer, break off the dose you'd like to take, and eat it. Then put the bar back in the freezer.The effects will start to kick in within 30 minutes." },
+    { q: "How long do the effects last?", a: "The effects of the Magic Bar typically last for 4-5 hours." },
+    { q: "What are the risks of taking the Magic Bar?", a: "The Magic Bar is safe to consume for most people. But please fill out our screening quiz to make sure it's safe for you." }]
 
   return (
     <section id="faq" className="py-24 bg-neutral-50" data-reveal>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">Have Questions?</h2>
-            <p className="mt-4 text-neutral-700 max-w-prose">ZBiotics is the first of its kind, and that’s bound to raise some questions. As scientists, curiosity is in our DNA, so we encourage you to ask your own and read our FAQ.</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">Questions?</h2>
+            <p className="mt-4 text-neutral-700 max-w-prose">The Magic Bar is the first of its kind, so we get a lot of questions. If your question isn't answered here, please ask your retailer for more information.</p>
             <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/Dosing%20Guide%20-%20No%20Border%20-%20Expanded.png" alt="Bottle illustration with usage tips" className="mt-10 w-full rounded-3xl border border-neutral-200" loading="lazy" />
           </div>
           <div className="space-y-4">{faqs.map((f, i) => (<FaqItem key={i} q={f.q} a={f.a} />))}</div>
