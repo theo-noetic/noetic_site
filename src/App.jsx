@@ -213,16 +213,10 @@ function Header({ cartCount, onOpenCart }) {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[15px]">
-            <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works">VIEW PRODUCTS</a>
-            <Link className="hover:text-neutral-600" to="/how-it-works">Science</Link>       
-            <Dropdown label="About" items={[{label:"Mission",href:"#mission"},{label:"Team",href:"#team"},{label:"Reviews",href:"#reviews"}]} />
-            <a className="hover:text-neutral-600" href="#faq">Support</a>
-            <button onClick={onOpenCart} className="relative inline-flex items-center gap-2 hover:text-neutral-700">
-              <span>Cart</span>
-              {cartCount > 0 && (
-                <span className="inline-flex items-center justify-center text-xs font-medium rounded-full min-w-[22px] h-[22px] badge-orange">{cartCount}</span>
-              )}
-            </button>
+            <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works">COMING SOON</a>
+            <Link className="hover:text-neutral-600" to="/how-it-works">Science</Link>   
+            <a className="hover:text-neutral-600" href="#faq">Instructions</a>
+            <Link className="hover:text-neutral-600" to="/lab-notes">Blog</Link>           
           </nav>
 
           {/* Mobile controls */}
@@ -242,7 +236,7 @@ function Header({ cartCount, onOpenCart }) {
       {open && (
         <div className="md:hidden border-t border-neutral-200 bg-white">
           <div className="px-4 py-4 space-y-3 text-sm">
-            <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works" onClick={() => setOpen(false)}>VIEW PRODUCTS</a>
+            <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works" onClick={() => setOpen(false)}>COMING SOON</a>
             <Disclosure label="Science" items={[{label:"How it Works", href: "#how-it-works"},{label:"Technology", href: "#technology"}]} onNavigate={()=>setOpen(false)} />
             <Disclosure label="About" items={[{label:"Mission", href: "#mission"},{label:"Team", href: "#team"},{label:"Reviews", href: "#reviews"}]} onNavigate={()=>setOpen(false)} />
             <a className="block" href="#lab-notes" onClick={() => setOpen(false)}>Blog</a>
