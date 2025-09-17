@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import HowItWorks from "./howitworks.jsx";
+import Instructions from "./instructions.jsx";
 import { Link, Routes, Route, useLocation } from "react-router-dom";
 
 /**
@@ -95,6 +96,7 @@ export default function ZbioticsReplica() {
           </main>
         } />
         <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/instructions" element={<Instructions />} />
         <Route path="*" element={
           <main>
             <Hero />
@@ -214,7 +216,7 @@ function Header({ cartCount, onOpenCart }) {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[15px]">
             <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works">COMING SOON</a>
-          </nav>
+            <Link className="hover:text-neutral-600" to="/instructions">Instructions</Link>             </nav>
           {/* Mobile controls */}
           <div className="md:hidden flex items-center gap-2">
             <button onClick={onOpenCart} aria-label="Open cart" className="p-2 rounded hover:bg-neutral-100 relative">
