@@ -235,10 +235,7 @@ function Header({ cartCount, onOpenCart }) {
         <div className="md:hidden border-t border-neutral-200 bg-white">
           <div className="px-4 py-4 space-y-3 text-sm">
             <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works" onClick={() => setOpen(false)}>COMING SOON</a>
-            <Disclosure label="Science" items={[{label:"How it Works", href: "#how-it-works"},{label:"Technology", href: "#technology"}]} onNavigate={()=>setOpen(false)} />
-            <Disclosure label="About" items={[{label:"Mission", href: "#mission"},{label:"Team", href: "#team"},{label:"Reviews", href: "#reviews"}]} onNavigate={()=>setOpen(false)} />
-            <a className="block" href="#lab-notes" onClick={() => setOpen(false)}>Blog</a>
-            <a className="block" href="#faq" onClick={() => setOpen(false)}>Support</a>
+            <Link className="block hover:text-neutral-600" to="/instructions" onClick={() => setOpen(false)}>Instructions</Link>
           </div>
         </div>
       )}
