@@ -1,6 +1,6 @@
 {
   "rewrites": [
     { "source": "/((?!assets|api|_next|.*\\..*).*)", "destination": "/" },
-    { "source": "/info", "destination": "/instructions", "permanent": true }
+    { "source": "/info", "destination": "/instructions"}
   ]
 }
