@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import HowItWorks from "./howitworks.jsx";
 import Instructions from "./instructions.jsx";
-import { Link, Routes, Route, useLocation } from "react-router-dom";
+import { Link, Routes, Route, useLocation, Navigate } from "react-router-dom";
 
 /**
  * ZBiotics — Homepage (April 5, 2024 snapshot) replica
@@ -97,6 +97,7 @@ export default function ZbioticsReplica() {
         } />
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/instructions" element={<Instructions />} />
+        <Route path="/info" element={<Navigate to="/instructions" replace />} />
         <Route path="*" element={
           <main>
             <Hero />
