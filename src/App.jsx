@@ -89,7 +89,6 @@ export default function ZbioticsReplica() {
             <PreAlcoholSection />
             <BetterMornings />
             <TomorrowSection />
-            <LabNotes />
             <Faq />
             <Newsletter />
           </main>
@@ -103,7 +102,6 @@ export default function ZbioticsReplica() {
             <PreAlcoholSection />
             <BetterMornings />
             <TomorrowSection />
-            <LabNotes />
             <Faq />
             <Newsletter />
           </main>
@@ -190,7 +188,7 @@ function TopNotice() {
   if (!visible) return null;
   return (
     <div className="w-full bg-neutral-900 text-white text-center text-[13px] tracking-wide py-2 px-3 flex items-center justify-center gap-4">
-      <span>LAUNCHING IN 6 WEEKS!</span>
+      <span>LAUNCHING SOON!</span>
       <button className="absolute right-3 text-white/80 hover:text-white" onClick={() => setVisible(false)} aria-label="Dismiss notice">×</button>
     </div>
   );
@@ -627,56 +625,6 @@ function TomorrowSection() {
   );
 }
 
-
-function LabNotes() {
-  const posts = [
-    { title: "What is mycelium?", excerpt: "What's the difference between a mushroom, a truffle, and mycelium? And why should you care?", href: "#" },
-    { title: "Why is it shaped like a chocolate bar?", excerpt: "Learn why we developed the Magic Bar to look like a chocolate bar, and why this makes it easier to dose.", href: "#" },
-    { title: "How should I prepare for a trip?", excerpt: "Learn how to prepare for a large-dose psychedelic trip, and what to expect.", href: "#" },
-    { title: "What are the risks when taking a psychedelic like the Magic Bar?", excerpt: "Learn when it's safe to take a psychedelic like the Magic Bar, and when it's not.", href: "#" },
-    { title: "What's legal, and what's not, in the Netherlands?", excerpt: "If it's not legal, there's no guarantee it's safe. Learn the Dutch laws on psychedelics.", href: "#" },
-  ];
-
-  const listRef = useRef(null);
-  const scrollByDir = (dir) => {
-    const el = listRef.current; if (!el) return;
-    const card = el.querySelector('[data-post-card]');
-    const w = card ? card.getBoundingClientRect().width : 360;
-    el.scrollBy({ left: dir * (w + 64), behavior: 'smooth' });
-  };
-
-  return (
-    <section id="lab-notes" className="py-20" data-reveal>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-[420px_1fr] gap-10 items-start">
-          {/* Left info + CTA */}
-          <div>
-            <h2 className="text-3xl font-semibold tracking-tight">Lab Notes</h2>
-            <p className="mt-2 text-neutral-600">Read our blog to learn more about the science of psychedelics, mycelium, our company, and more.</p>
-            <a href="#" className="mt-6 inline-flex items-center justify-center rounded px-5 py-3 font-medium btn-orange">START LEARNING</a>
-            <div className="mt-10 flex gap-6">
-              <button onClick={() => scrollByDir(-1)} className="w-16 h-16 rounded-full border border-neutral-400 grid place-items-center hover:bg-neutral-50" aria-label="Previous posts"><ArrowLeft/></button>
-              <button onClick={() => scrollByDir(1)} className="w-16 h-16 rounded-full border border-neutral-400 grid place-items-center hover:bg-neutral-50" aria-label="Next posts"><ArrowRight/></button>
-            </div>
-          </div>
-
-          {/* Right scroller: text-only cards (no images) */}
-          <div ref={listRef} className="overflow-x-auto no-scrollbar">
-            <div className="flex gap-16 pr-8">
-              {posts.map((p, i) => (
-                <article key={i} data-post-card className="min-w-[360px] max-w-[440px]">
-                  <h3 className="text-2xl font-semibold leading-tight">{p.title}</h3>
-                  {p.excerpt && <p className="mt-3 text-neutral-600 leading-relaxed">{p.excerpt}</p>}
-                  <a href={p.href} className="mt-6 inline-flex items-center gap-4 text-sm tracking-wider text-neutral-800 hover:text-neutral-950">READ <span className="opacity-60">MORE</span> <span aria-hidden>→</span></a>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Faq() {
   const faqs = [
