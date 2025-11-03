@@ -212,7 +212,6 @@ function Header({ cartCount, onOpenCart }) {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[15px]">
-            <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works">COMING SOON</a>
             <Link className="hover:text-neutral-600" to="/how-it-works">How It Works</Link>
             <Link className="hover:text-neutral-600" to="/instructions">Instructions</Link>             </nav>
           {/* Mobile controls */}
@@ -232,7 +231,6 @@ function Header({ cartCount, onOpenCart }) {
       {open && (
         <div className="md:hidden border-t border-neutral-200 bg-white">
           <div className="px-4 py-4 space-y-3 text-sm">
-            <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works" onClick={() => setOpen(false)}>COMING SOON</a>
             <Link className="block hover:text-neutral-600" to="/how-it-works" onClick={() => setOpen(false)}>How It Works</Link>
             <Link className="block hover:text-neutral-600" to="/instructions" onClick={() => setOpen(false)}>Instructions</Link>
           </div>
@@ -290,9 +288,6 @@ function Hero() {
         <div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight">The first psychedelic mycelium bar</h1>
           <p className="mt-6 text-lg leading-relaxed text-neutral-700 max-w-xl">The Magic Bar is psychedelic tempeh - mushrooms, grown on grain. It produces a psychedelic experience with less nausea and more positive trips than 'magic truffles'.</p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#how-it-works" className="inline-flex items-center justify-center rounded px-6 py-3 font-medium btn-orange">FIND A STORE</a>
-          </div>
         </div>
         <div className="relative">
           <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/mycelium_bar_large.png" alt="Magic Bar" className="w-full h-[300px] sm:h-[400px] lg:h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
@@ -401,7 +396,6 @@ function PreAlcoholSection() {
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">The first of its kind</h2>
             <p className="mt-6 text-neutral-700 leading-relaxed">We took the mycelium of a potent psychedelic mushroom species, and grew it on easy-to-digest pasta flour.</p>
             <p className="mt-4 text-neutral-700 leading-relaxed">The result is a psychedelic product that's easier on your stomach, and easier to dose than magic truffles.</p>
-            <a href="#lab-notes" className="mt-8 inline-flex items-center justify-center rounded px-6 py-3 font-medium btn-orange">LEARN MORE</a>
           </div>
         </div>
 
@@ -424,7 +418,6 @@ function PreAlcoholSection() {
             <h2 className="text-4xl font-semibold tracking-tight">No nausea</h2>
             <p className="mt-6 text-neutral-700 leading-relaxed max-w-2xl mx-auto">The Magic Bar is much easier to digest than magic truffles, because it's over 50% pasta flour.</p>
             <p className="mt-4 text-neutral-700 leading-relaxed max-w-2xl mx-auto">This means little to no nausea, and a (much) more enjoyable experience.</p>
-            <a href="#lab-notes" className="mt-10 inline-flex items-center justify-center rounded px-6 py-3 font-medium btn-orange">LEARN MORE</a>
           </div>
 
           {/* Right image (lower) */}
@@ -576,9 +569,6 @@ function TomorrowSection() {
             <p className="mt-6 text-neutral-700 leading-relaxed max-w-3xl lg:max-w-prose mx-auto lg:mx-0">
               The Magic Bar is shaped like a chocolate bar, with 10 squares. Each square is 1/10 of a full dose. To find your perfect dose, just count out the number of squares. 
             </p>
-            <a href="#lab-notes" className="mt-8 inline-flex items-center justify-center rounded px-5 py-2.5 font-medium btn-orange">
-              SEE THE POSSIBILITIES
-            </a>
           </div>
 
           {/* Rotating 3D viewer */}
@@ -669,9 +659,8 @@ function Newsletter() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-semibold tracking-tight">Keep up to date with the Magic Bar</h2>
         <p className="mt-2 text-neutral-600">Exclusive updates and opportunities for subscribers</p>
-        <form className="mt-8 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-3 max-w-xl mx-auto" onSubmit={(e)=>e.preventDefault()}>
+        <form className="mt-8 max-w-xl mx-auto" onSubmit={(e)=>e.preventDefault()}>
           <input type="email" required placeholder="Enter your email" className="w-full rounded-full border border-neutral-300 px-5 py-3 outline-none focus:ring-2 focus:ring-neutral-900"/>
-          <button className="inline-flex items-center justify-center rounded px-6 py-3 font-medium btn-orange">Subscribe</button>
         </form>
         <p className="mt-3 text-xs text-neutral-500">Unsubscribe anytime • <a className="underline" href="#">Privacy Policy</a></p>
       </div>
