@@ -86,7 +86,6 @@ export default function ZbioticsReplica() {
         <Route path="/" element={
           <main>
             <Hero />
-            <PressBar />
             <PreAlcoholSection />
             <BetterMornings />
             <TomorrowSection />
@@ -101,7 +100,6 @@ export default function ZbioticsReplica() {
         <Route path="*" element={
           <main>
             <Hero />
-            <PressBar />
             <PreAlcoholSection />
             <BetterMornings />
             <TomorrowSection />
@@ -217,6 +215,7 @@ function Header({ cartCount, onOpenCart }) {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[15px]">
             <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works">COMING SOON</a>
+            <Link className="hover:text-neutral-600" to="/how-it-works">How It Works</Link>
             <Link className="hover:text-neutral-600" to="/instructions">Instructions</Link>             </nav>
           {/* Mobile controls */}
           <div className="md:hidden flex items-center gap-2">
@@ -236,6 +235,7 @@ function Header({ cartCount, onOpenCart }) {
         <div className="md:hidden border-t border-neutral-200 bg-white">
           <div className="px-4 py-4 space-y-3 text-sm">
             <a className="inline-flex items-center justify-center px-4 py-2 font-medium rounded btn-orange" href="#how-it-works" onClick={() => setOpen(false)}>COMING SOON</a>
+            <Link className="block hover:text-neutral-600" to="/how-it-works" onClick={() => setOpen(false)}>How It Works</Link>
             <Link className="block hover:text-neutral-600" to="/instructions" onClick={() => setOpen(false)}>Instructions</Link>
           </div>
         </div>
@@ -443,13 +443,6 @@ function PreAlcoholSection() {
         </div>
       </div>
 
-      {/* Counter bar (unchanged) */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-16">
-        <div className="rounded-2xl bg-neutral-50 border border-neutral-200 p-6 sm:p-8 md:p-10 flex items-center justify-between gap-6">
-          <div><p className="text-2xl sm:text-3xl font-semibold">2 <span className="font-normal">Years of Research</span></p></div>
-          <div className="text-sm text-neutral-600">Developed by a team of two Oxford and Cambridge scientists in a lab in Utrecht.</div>
-        </div>
-      </div>
     </section>
   );
 }
@@ -468,7 +461,7 @@ function BetterMornings() {
   const cur = items[idx];
 
   return (
-    <section id="reviews" className="py-24 bg-white border-t border-neutral-200" data-reveal>
+    <section id="reviews" className="py-24 bg-white" data-reveal>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-[40px] sm:text-[48px] font-semibold tracking-tight mb-6">Better Trips</h2>
 
@@ -701,7 +694,6 @@ function Faq() {
           <div>
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">Questions?</h2>
             <p className="mt-4 text-neutral-700 max-w-prose">The Magic Bar is the first of its kind, so we get a lot of questions. If your question isn't answered here, please ask your retailer for more information.</p>
-            <img src="https://6htrntmt012y8ehd.public.blob.vercel-storage.com/Dosing%20Guide%20-%20No%20Border%20-%20Expanded.png" alt="Bottle illustration with usage tips" className="mt-10 w-full rounded-3xl border border-neutral-200" loading="lazy" />
           </div>
           <div className="space-y-4">{faqs.map((f, i) => (<FaqItem key={i} q={f.q} a={f.a} />))}</div>
         </div>
@@ -727,8 +719,8 @@ function Newsletter() {
   return (
     <section className="py-20" data-reveal>
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-semibold tracking-tight">T(r)ips and tricks on how to use psychedelics</h2>
-        <p className="mt-2 text-neutral-600">Exclusive updates for subscribers • Stay up to date about the Magic Bar</p>
+        <h2 className="text-3xl font-semibold tracking-tight">Keep up to date with the Magic Bar</h2>
+        <p className="mt-2 text-neutral-600">Exclusive updates and opportunities for subscribers</p>
         <form className="mt-8 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-3 max-w-xl mx-auto" onSubmit={(e)=>e.preventDefault()}>
           <input type="email" required placeholder="Enter your email" className="w-full rounded-full border border-neutral-300 px-5 py-3 outline-none focus:ring-2 focus:ring-neutral-900"/>
           <button className="inline-flex items-center justify-center rounded px-6 py-3 font-medium btn-orange">Subscribe</button>
